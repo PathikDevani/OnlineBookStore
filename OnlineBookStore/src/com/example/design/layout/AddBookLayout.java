@@ -20,8 +20,9 @@ import android.widget.Toast;
 import com.example.api.ABView;
 import com.example.api.abLyt;
 import com.example.database.Book;
+import com.example.msgencode.keyList;
 import com.example.onlinebook.MainActivity;
-import com.exmaple.msgencode.keyList;
+import com.example.service.AppService;
 @SuppressWarnings("deprecation")
 public class AddBookLayout extends abLyt {
 	EditText booknameE, bookAuthorE, bookPageE, bookPriceE, bookItemE,bookSellerE,bookLangugageE,bookPublisherE;
@@ -164,7 +165,7 @@ public class AddBookLayout extends abLyt {
 					book.setStar("888888");
 					book.setReview("No review");
 					Toast.makeText(context, "Book added to List.....",Toast.LENGTH_LONG).show();
-					MainActivity.db.setBook(book);
+					AppService.db.setBook(book);
 					flushForm();
 					MainActivity.context.sendBroadcast(new Intent(keyList.brodCast.UPDATE_BOOK_LIST));
 					MainActivity.context.sendBroadcast(new Intent(keyList.brodCast.UPDATE_TRANSCTION_LIST));

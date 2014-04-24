@@ -2,6 +2,7 @@ package com.example.design.layout;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.widget.AbsoluteLayout;
 import android.widget.TextView;
 
 import com.example.api.ABView;
@@ -21,11 +22,19 @@ public class MainLayout extends abLyt{
 		start = new SStart(context, width, MainActivity.cf.dpix[40], 0, height - MainActivity.cf.dpix[40]);
 		addView(start);
 		
+		TextView ipADD = new TextView(context);
+		ipADD.setTextColor(Color.BLACK);
+		ipADD.setText("Ip : "+MainActivity.getLocalIpAddress()[0]+":8080");
+		ipADD.setLayoutParams(new AbsoluteLayout.LayoutParams(AbsoluteLayout.LayoutParams.WRAP_CONTENT, AbsoluteLayout.LayoutParams.WRAP_CONTENT, MainActivity.cf.dpix[15], MainActivity.cf.dpix[50]));
+		addView(ipADD);
+		
 		slider = new SliderBtn(context, width, MainActivity.cf.dpix[40], 0, 0);
 		addView(slider);
 		
 		Mlayout = new SlidreMlayout(context, width, height - MainActivity.cf.dpix[40], 0, MainActivity.cf.dpix[40] - height);
+		Mlayout.bringToFront();
 		addView(Mlayout);
+		
 		
 		
 	

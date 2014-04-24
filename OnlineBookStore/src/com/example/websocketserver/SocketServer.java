@@ -1,4 +1,4 @@
-package com.exmple.websocketserver;
+package com.example.websocketserver;
 
 import java.net.InetSocketAddress;
 import java.util.Collection;
@@ -6,8 +6,8 @@ import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
 
+import com.example.msgencode.Encode;
 import com.example.service.AppService;
-import com.exmaple.msgencode.Encode;
 
 import android.util.Log;
 import android.widget.Toast;

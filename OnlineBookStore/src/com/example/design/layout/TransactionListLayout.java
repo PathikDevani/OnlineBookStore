@@ -15,8 +15,9 @@ import android.widget.AbsoluteLayout.LayoutParams;
 import com.example.api.ABView;
 import com.example.api.abLyt;
 import com.example.design.listview.TransactionADP;
+import com.example.msgencode.keyList;
 import com.example.onlinebook.MainActivity;
-import com.exmaple.msgencode.keyList;
+import com.example.service.AppService;
 
 public class TransactionListLayout extends abLyt {
 	ListView list;
@@ -52,7 +53,7 @@ public class TransactionListLayout extends abLyt {
 		balTextView = new TextView(context);
 		balTextView.setTextColor(Color.WHITE);
 		balTextView.setLayoutParams(new AbsoluteLayout.LayoutParams(AbsoluteLayout.LayoutParams.WRAP_CONTENT, AbsoluteLayout.LayoutParams.WRAP_CONTENT, MainActivity.cf.dpix[10], MainActivity.cf.dpix[5]));
-		balTextView.setText("ACC Blance : Rs . "+MainActivity.db.getACCBlance());
+		balTextView.setText("ACC Blance : Rs . "+AppService.db.getACCBlance());
 		balTextView.setTextSize(22);
 		balTextView.bringToFront();
 		balance.addView(balTextView);
@@ -66,7 +67,7 @@ public class TransactionListLayout extends abLyt {
 			if (intent.getAction().equals(keyList.brodCast.UPDATE_TRANSCTION_LIST)) {
 				adp.dataChange();
 				adp.notifyDataSetChanged();
-				balTextView.setText("ACC Blance : Rs . "+MainActivity.db.getACCBlance());
+				balTextView.setText("ACC Blance : Rs . "+AppService.db.getACCBlance());
 			} else if (intent.getAction().equals(keyList.brodCast.DISTORY_APP)) {
 				context.unregisterReceiver(receiver);
 			}

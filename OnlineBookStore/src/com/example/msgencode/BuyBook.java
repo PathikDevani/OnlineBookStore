@@ -1,4 +1,4 @@
-package com.exmaple.msgencode;
+package com.example.msgencode;
 
 import java.util.Collection;
 import java.util.List;
@@ -24,7 +24,7 @@ public class BuyBook {
 	public BuyBook(String count, String Bid, String name, int item, int price,
 			WebSocket conn, Collection<WebSocket> collection) {
 
-		book = MainActivity.db.getBook(Bid);
+		book = AppService.db.getBook(Bid);
 		this.c = collection;
 		Transaction transaction = new Transaction();
 		transaction.setBookId(book.getId());
@@ -33,8 +33,8 @@ public class BuyBook {
 		transaction.setUser(name);
 
 		book.setItem(Integer.parseInt(book.getItem()) - item + "");
-		MainActivity.db.setBook(book);
-		MainActivity.db.addTransaction(transaction);
+		AppService.db.setBook(book);
+		AppService.db.addTransaction(transaction);
 
 		JSONArray json = new JSONArray();
 		json.put(count);

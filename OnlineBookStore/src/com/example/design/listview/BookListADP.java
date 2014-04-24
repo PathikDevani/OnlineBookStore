@@ -27,6 +27,7 @@ import android.widget.Toast;
 import com.example.api.ABView;
 import com.example.api.abLyt;
 import com.example.onlinebook.MainActivity;
+import com.example.service.AppService;
 
 @SuppressLint("NewApi")
 public class BookListADP extends BaseAdapter {
@@ -36,12 +37,12 @@ public class BookListADP extends BaseAdapter {
 	
 	public BookListADP(Context context) {
 		this.context = context;
-		booklist = MainActivity.db.getJArrayBooklist();
+		booklist = AppService.db.getJArrayBooklist();
 		isLongClick = false;
 	}
 
 	public void dataChange(){
-		booklist = MainActivity.db.getJArrayBooklist();
+		booklist = AppService.db.getJArrayBooklist();
 	}
 	@Override
 	public int getCount() {

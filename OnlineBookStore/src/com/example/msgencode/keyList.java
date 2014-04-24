@@ -1,4 +1,4 @@
-package com.exmaple.msgencode;
+package com.example.msgencode;
 
 public class keyList {
 	public static final int BOOK_LIST = 1;

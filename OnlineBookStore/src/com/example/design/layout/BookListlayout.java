@@ -36,8 +36,9 @@ import com.example.api.ABView;
 import com.example.api.abLyt;
 import com.example.database.Book;
 import com.example.design.listview.BookListADP;
+import com.example.msgencode.keyList;
 import com.example.onlinebook.MainActivity;
-import com.exmaple.msgencode.keyList;
+import com.example.service.AppService;
 @SuppressWarnings("deprecation")
 public class BookListlayout extends abLyt {
 	ListView list;
@@ -177,7 +178,7 @@ public class BookListlayout extends abLyt {
 		ABView delete = new ABView(context, MainActivity.cf.dpix[140], MainActivity.cf.dpix[40], MainActivity.cf.dpix[5], MainActivity.cf.dpix[250]){
 			@Override
 			public void onClick(MotionEvent event) {
-				MainActivity.db.deletBook(bookid);
+				AppService.db.deletBook(bookid);
 				context.sendBroadcast(new Intent(keyList.brodCast.UPDATE_BOOK_LIST));
 				removieAnim(main);
 			}
@@ -189,9 +190,9 @@ public class BookListlayout extends abLyt {
 			@Override
 			public void onClick(MotionEvent event) {
 				if(isNumeric(addI.getText().toString())){
-					Book book = MainActivity.db.getBook(bookid);
+					Book book = AppService.db.getBook(bookid);
 					book.setItem(Integer.parseInt(book.getItem()) + Integer.parseInt(addI.getText().toString())+"");
-					MainActivity.db.setBook(book);
+					AppService.db.setBook(book);
 					adp.dataChange();
 					adp.notifyDataSetChanged();
 					removieAnim(main);

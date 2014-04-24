@@ -19,7 +19,7 @@ import android.util.Log;
 
 
 public class DBhelper extends SQLiteOpenHelper{
-	private static final int DATABASE_VERSION = 2;
+	private static final int DATABASE_VERSION = 1;
 	
 	private static final String TABLE_TRANSACTION = "buy";
 	private static final String TRANSACTION_ID= "id";
@@ -100,7 +100,7 @@ public class DBhelper extends SQLiteOpenHelper{
 				TRANSACTION_MONEY+","+
 				TRANSACTION_TIME;
 		
-		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b1','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','315','WS Retail','In Stock','15')");
+		/*db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b1','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','315','WS Retail','In Stock','15')");
 		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b2','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','8478','WS Retail','In Stock','15')");
 		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b3','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','4578','WS Retail','In Stock','15')");
 		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b4','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','315','WS Retail','In Stock','15')");
@@ -108,7 +108,21 @@ public class DBhelper extends SQLiteOpenHelper{
 		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b6','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','585','WS Retail','In Stock','15')");
 		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b7','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','255','WS Retail','In Stock','15')");
 		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b8','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','155','WS Retail','In Stock','15')");
-		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b9','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','115','WS Retail','In Stock','15')");	
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values ('b9','Avenida del parque','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','156','Pathik Books','115','WS Retail','In Stock','15')");*/
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b1','Java Cookbook','Ian F. Darwin','988855','90 Ratings | 26 Reviews','Paperback','English','870','O Reilly Media','2280','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b2','API Design for C++','Martin Reddy','988855','90 Ratings | 26 Reviews','Paperback','English','472','Elsevier / Morgan Kaufmann','3600','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b3','Android Cookbook','Ian F. Darwin','988855','90 Ratings | 26 Reviews','Paperback','English','710','O Reilly Media','3600','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b4','Chanakya Neeti','Chankya','988855','90 Ratings | 26 Reviews','Paperback','Gujrati','152','Diamond Books','83','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b5','The Monk as Man: The Unknown Life of Swami Vivekananda','Sankar','988855','90 Ratings | 26 Reviews','Paperback','English','264','Penguin','83','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b6','The 3 Mistakes of My Life','CHETAN BHAGAT','988855','90 Ratings | 26 Reviews','Paperback','English','260','RUPA & CO.','140','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b7','Talk Like TED','Carmine Gallo','988855','90 Ratings | 26 Reviews','Paperback','English','300','General Non-Fiction','415','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b8','Life of Pi','Yann Martel','988855','90 Ratings | 26 Reviews','Paperback','English','352','RUPA & CO.','251','Canongate','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b9','The Spinning Heart','Donal Ryan','988855','90 Ratings | 26 Reviews','Paperback','English','160','Random House','1346','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b10','Killing Them Softly (Cogan s Trade Movie Tie-in Edition) ','George V. Higgins','988855','90 Ratings | 26 Reviews','Paperback','English','216','Knopf Doubleday Publishing Group','923','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b11','Ten Things I Love About You','Quinn, Julia, Quinn','988855','90 Ratings | 26 Reviews','Paperback','English','348','Little, Brown Book Group','399','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b12','Casino Royale','Ian Fleming','988855','90 Ratings | 26 Reviews','Paperback','English','256','Vintage Classics','838','WS Retail','In Stock','15')");
+		db.execSQL("insert into "+TABLE_BOOK+"  ("+book_detail+") values('b13','Leave Me Alone(Finding and Losing Myself)','Maureen Corrigan','988855','90 Ratings | 26 Reviews','Paperback','English','260','Knopf Doubleday Publishing Group','745','WS Retail','In Stock','15')");
+
 	}
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {

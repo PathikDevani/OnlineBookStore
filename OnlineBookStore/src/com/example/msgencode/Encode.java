@@ -1,4 +1,4 @@
-package com.exmaple.msgencode;
+package com.example.msgencode;
 
 import java.util.Collection;
 
@@ -24,7 +24,7 @@ public class Encode {
 		case keyList.BOOK_LIST:
 				JSONArray a = new JSONArray();
 				a.put(count);
-				a.put(MainActivity.db.getJArrayBooklist());
+				a.put(AppService.db.getJArrayBooklist());
 				conn.send(a.toString());
 			break;
 			

@@ -5,7 +5,7 @@ import java.io.IOException;
 import com.example.database.DBhelper;
 import com.example.onlinebook.MainActivity;
 import com.example.webserver.WebSever;
-import com.exmple.websocketserver.SocketServer;
+import com.example.websocketserver.SocketServer;
 
 import android.app.Service;
 import android.content.Context;
@@ -16,6 +16,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class AppService extends Service {
+	public static DBhelper db;
 	public static WebSever http;
 	public static SocketServer webSocket;
 	int http_port = 8080;
@@ -33,14 +34,14 @@ public class AppService extends Service {
 		webSocket = new SocketServer(websocket_port);
 		handler = new Handler();
 		context = this;
-		//db = new DBhelper(context);
+		db = new DBhelper(context);
 	}
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		
 		//db = new DBhelper(context);
-		showMessages("service created....");
+		//showMessages("service created....");
 		if(!webSocket.isAlive())webSocket.start();
 		if (http.isAlive() == false) {
 			do {
@@ -69,7 +70,8 @@ public class AppService extends Service {
 
 	@Override
 	public void onDestroy() {
-		
+		if(db != null)
+			db.close();
 		if (http.isAlive())
 			http.stop();
 		if(webSocket.isAlive())

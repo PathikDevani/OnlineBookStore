@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import com.example.api.abLyt;
 import com.example.database.Book;
 import com.example.onlinebook.MainActivity;
+import com.example.service.AppService;
 
 import android.R;
 import android.R.bool;
@@ -28,7 +29,7 @@ public class TransactionADP extends BaseAdapter {
 	Context context;
 
 	public TransactionADP(Context context) {
-		tList = MainActivity.db.getTransacionList();
+		tList = AppService.db.getTransacionList();
 		this.context = context;
 	}
 
@@ -70,7 +71,7 @@ public class TransactionADP extends BaseAdapter {
 		} catch (JSONException e) {
 			
 		}
-		Book book = MainActivity.db.getBook(bid);
+		Book book = AppService.db.getBook(bid);
 		Row row ;
 		if(convertView == null){
 			row = new Row(context);
@@ -84,7 +85,7 @@ public class TransactionADP extends BaseAdapter {
 	}
 
 	public void dataChange() {
-		tList = MainActivity.db.getTransacionList();
+		tList = AppService.db.getTransacionList();
 	}
 
 	class Row extends abLyt {
