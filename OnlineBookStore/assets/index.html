@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Index</title>
+    <script src="js/jquery-2.1.0.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div class="body">
+    <div class="header">
+        <div class="topHeader">
+            <div class="mainHeader center">
+                <div class="siteLogo"></div>
+                <div class="midHeader">
+                    <div class="search"></div>
+                </div>
+                <div class="cart"></div>
+
+            </div>
+        </div>
+        <div class="bottomHeader">
+            <div class="menubar center disabletext">
+                <div class="menuitem activeiteam ">Home</div>
+                <div class="menuitem">Dealers</div>
+                <div class="menuitem">Customer support</div>
+                <div class="menuitem">Contact us</div>
+                <div class="menuitem">About us</div>
+            </div>
+        </div>
+    </div>
+    <div class="mainbody center" id="mbody">
+        <div class="bookContain" id="bbody">
+            <div class="bookimg">
+                <div class="bimg"></div>
+            </div>
+            <div class="bookdetails lcolor">
+                <div class="title">Baby Touch (Set of 3 Books)</div>
+                <div class="author lcolor">Author:Ladybird</div>
+                <div class="rating">
+                    <div class="star"> 88888</div>
+                    <div class="review">115 Ratings | <span>26 Reviews</span></div>
+                    <div class="wreview">Write a Review</div>
+                    <div class="addfev">Add to My Wishlist</div>
+                </div>
+                <hr>
+                <div class="bookinfo">
+                    <div class="firstbox">
+                        <div style="width: 100%;height: 25px;float: left">
+                            <div style="background: green;width: 25px;height: 100%;float: left"></div>
+                            <div class="paperback">Paperback</div>
+                        </div>
+                        <div class="language">Language: English</div>
+                        <div class="price">Rs. 225</div>
+                        <div class="tax">inclusive of taxes</div>
+                        <div class="dcharge">+ Rs. 40 (Delivery charge)</div>
+                    </div>
+                    <div class="secinfo">
+                        <div class="page">Length: <span>128 Pages</span></div>
+                        <div class="publisher">Publisher: Diamond Books</span></div>
+                        <div class="seller">Seller: <span>WS Retail</span></span></div>
+                        <div class="publisher">86% positive feedback [?]</span></div>
+                    </div>
+                </div>
+                <div style="width: 100%;height: auto;font-family: consolas;font-size: 10px;float: left;margin-top: 25px;">
+                    Free Home Delivery if total order amount for Seller is Rs. 500 or above. [?]
+                </div>
+                <div class="buy">
+                    <div class="buybtn disabletext">Buy Now</div>
+                    <div class="istock">In Stock</div>
+                    <div class="dday">Standard delivery in 2-3 business days.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cartbox">
+    <div class="cover"></div>
+    <div id="mpopup" class="popup">
+        <div class="close"></div>
+        <p id="ptitle" class="title ptitle">Avenida del parque(<span>Rs. 115</span>)</p>
+
+        <br>
+        <p>Enter Name :<input placeholder="Enter name" id="pname" type="text" class="holo ptext" size="20"></p>
+        <p id="pitem">Enter Item :<input placeholder="Enter item" type="text" class="holo ptext" size="20"> available <span style="color: green;">10</span></p><br>
+        <p class="ptprice">Total price : <span>Rs. 2216</span></p>
+        <div class="submit">Place Order</div>
+    </div>
+</div>
+<div class="loader"></div>
+</body>
+<style>
+
+.submit:hover{
+    box-shadow: 4px 4px 8px -4px #000000;
+}
+.submit{
+    color: black;
+}
+.submit{
+    background: none repeat scroll 0 0 #FF4981;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px -6px #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: consolas;
+    font-size: 22px;
+    height: 40px;
+    letter-spacing: -1px;
+    line-height: 40px;
+    margin-left: calc(100% - 165px);
+    margin-top: 5px;
+    text-align: center;
+    width: 150px;
+}
+.cartbox p{
+    font-family: consolas;
+    letter-spacing: -1px;
+    text-indent: 15px;
+}
+.ptext{
+    color: #000000!important;
+    margin-left: 15px;
+    margin-top: -4px;
+    width: 200px!important;
+}
+.close{
+    background: none repeat scroll 0 0 #FF0000;
+    height: 25px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 25px;
+    cursor: pointer;
+}
+.ptitle{
+    border-bottom: 1px solid;
+    height: auto !important;
+    line-height: 60px;
+    margin-top: 0;
+    text-indent: 25px;
+}
+.popup{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #E5E6E9 #DFE0E4 #D0D1D5;
+    border-radius: 3px;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    margin-bottom: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 50px;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 500px;
+    z-index: 1001;
+    padding-bottom: 15px;
+}
+.cartbox{
+    display: block;
+    visibility: visible;
+}
+.cover{
+    background: none repeat scroll 0 0 #333333;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.loader{
+    width: 100%;
+    height: 100%;
+
+}
+body{
+    background: #E9EAED;
+}
+.bimg {
+    background: none repeat scroll 0 0 #FF4981;
+    border-radius: 3px;
+    float: left;
+    height: 280px;
+    margin-left: 35px;
+    margin-top: 45px;
+    width: 200px;
+    box-shadow: 4px 4px 8px -6px #000000;
+}
+
+.dday {
+    float: left;
+    font-family: consolas;
+    font-size: 10px;
+    height: auto;
+    margin-left: 468px;
+    margin-top: -11px;
+    width: auto;
+}
+
+.ostock {
+    color: red !important;
+}
+
+.istock {
+    color: #008000;
+    float: left;
+    font-family: consolas;
+    font-size: 30px;
+    height: auto;
+    letter-spacing: -1px;
+    margin-left: 315px;
+    margin-top: 25px;
+    width: auto;
+}
+.buybtn:active{
+    color: black;
+}
+.buybtn:hover{
+    box-shadow: 4px 4px 8px -4px #000000;
+}
+.buybtn {
+    background: none repeat scroll 0 0 #FF4981;
+    border-radius: 8px;
+    color: #FFFFFF;
+    float: left;
+    font-family: consolas;
+    font-size: 22px;
+    height: 40px;
+    letter-spacing: -1px;
+    line-height: 40px;
+    text-align: center;
+    width: 150px;
+    margin-top: 32px;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px -6px #000000;
+}
+
+.buy {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.seller {
+    float: left;
+    font-family: consolas;
+    font-size: 14px;
+    height: auto;
+    margin-top: 27px;
+    width: 100%;
+}
+
+.publisher {
+    float: left;
+    font-family: consolas;
+    font-size: 12px;
+    height: auto;
+    margin-top: 4px;
+    width: 100%;
+}
+
+span {
+    font-weight: bold;
+}
+
+.page {
+    width: 100%;
+    height: auto;
+    font-family: consolas;
+    font-size: 12px;
+    float: left;
+}
+
+.secinfo {
+    float: left;
+    height: auto;
+    width: calc(100% - 275px);
+}
+
+.dcharge {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    font-family: consolas;
+    float: left;
+}
+
+.tax {
+    float: left;
+    font-family: consolas;
+    font-size: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.price {
+    float: left;
+    font-family: consolas;
+    font-size: 30px;
+    font-weight: bold;
+    height: 35px;
+    margin-top: 20px;
+    width: 100%;
+    color: black;
+}
+
+.language {
+    float: left;
+    font-family: consolas;
+    font-size: 12px;
+    height: 14px;
+    line-height: 13px;
+    width: 100%;
+}
+
+.paperback {
+    width: calc(100% - 25px);
+    height: 100%;
+    float: left;
+    letter-spacing: -1px;
+    font-family: consolas;
+    font-size: 20px;
+    text-indent: 5px;
+}
+
+.firstbox {
+    width: 275px;
+    height: auto;
+    float: left;
+}
+
+.bookinfo {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+hr {
+    color: white;
+    float: left;
+    margin: 16px auto 15px 0;
+    width: 100%;
+
+}
+
+.line {
+    display: block;
+    float: left;
+    height: 10px;
+    width: 100%;
+}
+.star {
+    float: left;
+    height: 100%;
+    padding: 0 10px 0 0;
+    width: auto;
+}
+
+.review {
+    width: auto;
+    height: 100%;
+    float: left;
+
+}
+
+.wreview {
+    width: auto;
+    float: right;
+    height: 100%;
+
+}
+
+.addfev {
+
+    float: right;
+    height: 100%;
+    padding: 0 20px 0 0;
+    width: auto;
+}
+
+.rating {
+    float: left;
+    font-family: consolas;
+    font-size: 12px;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: 27px;
+    width: 100%;
+}
+
+.author {
+    float: left;
+    font-family: consolas;
+    font-size: 14px;
+    height: 14px;
+    width: 100%;
+}
+
+.lcolor {
+    color: #848484;
+}
+
+.title {
+    float: left;
+    color: #000000;
+    font-family: consolas;
+    font-size: 22px;
+    height: 50px;
+    letter-spacing: -1px;
+    line-height: 73px;
+    width: 100%;
+}
+
+.bookimg {
+    float: left;
+    height: auto;
+    width: 315px;
+}
+
+.bookdetails {
+    float: left;
+    height: auto;
+    width: calc(100% - 315px);
+}
+.bookContain:first-child{
+    margin-top: 25px;
+}
+.bookContain {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #E5E6E9 #DFE0E4 #D0D1D5;
+    border-image: none;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    height: auto;
+    margin-bottom: 25px;
+    padding: 0 20px 20px 0;
+    width: 100%;
+}
+
+
+.activeiteam {
+    color: #FF4981 !important;
+    background: #30B8FA !important;
+}
+
+.menuitem {
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Trebuchet MS';
+    font-size: 16px;
+    height: 100%;
+
+    line-height: 35px;
+    padding: 0 10px;
+    width: auto;
+}
+
+.menuitem:hover {
+    background: aqua;
+    color: black;
+}
+
+.menubar {
+    width: 1024px;
+    background: none repeat scroll 0 0 #058DCF;
+    height: 100%;
+}
+
+.midHeader {
+    width: 724px;
+    height: 100%;
+    position: absolute;
+    left: 200px;
+
+}
+
+.search {
+    background: red;
+    float: right;
+    height: 100%;
+    position: relative;
+    width: 45px;
+}
+
+.cart {
+
+    width: 100px;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+}
+
+.siteLogo {
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+
+}
+
+.mainHeader {
+    width: 1024px;
+    height: 100%;
+
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative !important;
+}
+
+.mainbody {
+
+    height: auto;
+    width: 1024px;
+    position: absolute;
+}
+
+.bottomHeader {
+    background: none repeat scroll 0 0 #058DCF;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    box-shadow: 0 4px 14px -10px #000000;
+
+}
+
+.topHeader {
+    background: none repeat scroll 0 0 #1D7AA3;
+    box-shadow: 0 -1px 11px -2px #000000;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background: black;
+    position: relative;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+input.holo[type='text'] {
+    outline: none;
+    background: linear-gradient(#A9A9A9, #A9A9A9) no-repeat scroll left bottom / 1px 6px, linear-gradient(#A9A9A9, #A9A9A9) repeat-x scroll center bottom / 1px 1px, linear-gradient(#A9A9A9, #A9A9A9) no-repeat scroll right bottom / 1px 6px rgba(0, 0, 0, 0);
+    border: medium none;
+    font-size: 14px;
+    line-height: 10px;
+    padding: 12px 8px 6px;
+
+    width: 0;
+    color: white;
+}
+#searchbox{
+    position: absolute;
+    right: 0;
+}
+input.holo[type='text']:hover {
+    background: bottom left linear-gradient(#0099cc, #0099cc) no-repeat, bottom center linear-gradient(#0099cc, #0099cc) repeat-x, bottom right linear-gradient(#0099cc, #0099cc) no-repeat;
+    background-size: 1px 6px, 1px 1px, 1px 6px;
+}
+
+::-webkit-input-placeholder {
+    color: #efefef;
+    padding: 5px 5px;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #efefef;
+    padding: 5px 5px;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #efefef;
+    padding: 5px 5px;
+}
+
+:-ms-input-placeholder {
+    color: #efefef;
+    padding: 5px 5px;
+}
+
+.disabletext {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('img/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+</style>
+<script type="text/javascript">
+
+    var defHost = location.hostname;
+    //console.log(defHost);
+    $(window).bind(defHost + "Ok", function () {
+        //websocket connection successful
+        console.log("connection succesfull ....");
+        $(".submit").on('click',function(){
+            var cartbox= $(".cartbox");
+            if(cartbox.find("tprice").text() == 0  ||  $(cartbox.find("input")[0]).val()==""){
+                console.log("Order fail");
+            }else{
+                $.fn.Ws.Send(defHost,$(".popup"),'2?'+cartbox.attr('pbid')+"!"+$(cartbox.find("input")[0]).val()+"!"+$(cartbox.find("input")[1]).val()+"!"+cartbox.find("bprice").text(),function(ev,data){
+                    if(data.msg){
+                        $("#mpopup").fadeOut('fast');
+                        $(".cartbox").append('<div id="spopup" class="popup">your book delevery as soon as.....<div id="sclose" class="close"></div></div>').fadeIn('fast');
+                        $("#sclose").on('click',function(){
+                            $("#spopup").remove();
+                            $(".cartbox").fadeOut('fast');
+                            $("#mpopup").fadeIn(500);
+                        });
+                    }
+                });
+            }
+        });
+
+        $.fn.Ws.Send(defHost, $(".mainbody"), '1?0', function (evt, data) {
+            for(var i=0;i<data.msg.length;i++){
+                addbook(data.msg[i],i==(data.msg.length-1));
+            }
+            function addbook(obj,i) {
+                var b = $(".bookContain").html();
+                if(true){
+                    var book = $('<div class="bookContain">' + b + '</div>' );
+                }else{
+                    var book = $('<div class="bookContain">' + b + '</div>' + '<hr style="margin-top: 70px;" noshde>');
+                }
+                $("#bbody").remove();
+                $(book[0]).attr({'id':obj.bid,'item':obj.item});
+                book.find(".title").text(obj.bname);
+                book.find(".author").text("Author "+obj.author);
+                book.find(".review").text(obj.review);
+                book.find(".paperback").text(obj.paperback);
+                book.find(".language").text("Language: "+obj.language);
+                book.find(".page").text("Length: "+obj.page+" Pages");
+                $(book.find(".publisher")[0]).text("Publisher: "+obj.publisher);
+                book.find(".price").html("Rs. "+'<bprice>'+obj.price+'<bprice>');
+                book.find(".seller").text("Seller: "+obj.seller);
+                book.find(".istock").text(obj.stock);
+                book.find(".buybtn").attr({'bid':obj.bid,'item':obj.item});
+                book.find(".bimg").css('background-image', 'url("img/' + obj.bid + '.jpg")');
+                $(".mainbody").append(book);
+            };
+            $(".buybtn").on('click',function(){
+                var book = $(this).parents('.bookContain');
+                var item = book.attr('item');
+                var bid = book.attr('id');
+                $(".cartbox").find("input").val("");
+                $(".cartbox").attr("pbid",bid);
+                $("#ptitle").html(book.find(".title").text() + ' (<span>Rs. <bprice>'+ book.find(".price").find('bprice').text()+'</bprice></span>)');
+                $("#pitem").find("span").text(item);
+                $(".ptprice").find("span").html("Rs. <tprice>0</tprice>");
+                $(".cartbox").css('marginTop',($(window).scrollTop()+50)+'px').fadeIn("fast");
+
+
+
+            });
+        });
+        $(".cartbox").fadeOut("fast");
+
+        $(".loader").delay(500).fadeOut("slow");
+        $(".close").on('click',function(){
+            $(".cartbox").fadeOut("fast");
+        });
+        $(".cover").on('click',function(){
+            $(".cartbox").fadeOut("fast");
+        });
+    });
+
+    $(document).ready(function () {
+        $.fn.Ws(defHost);
+        $("#pitem").find("input").keyup(function () {
+            this.value = this.value.replace(/[^0-9\.]/g,'');
+            if(parseInt($(this).val()) > parseInt($("#pitem").find("span").text())){
+                $(this).val(parseInt($("#pitem").find("span").text()));
+            }
+            var total = parseInt($(".ptitle").find('bprice').text()) * parseInt($(this).val());
+            console.log();
+            if(!isNaN(total)){
+                $(".ptprice").find("span").html('Rs. <tprice>'+total+'</tprice>');
+            }else{
+                $(".ptprice").find("span").html("Rs. <tprice>0</tprice>");
+            }
+
+        });
+        $(window).scroll(function () {
+            $(".mainHeader").css('left', -$(window).scrollLeft() + 'px');
+        });
+        $('.search').mouseover(function () {
+            if ($(".midHeader").find($("#searchbox")).get(0) === undefined) {
+                $(".search").animate({marginRight: '216px'}, 'fast');
+                var input = jQuery('<input id="searchbox" placeholder="Search" type="text" isopean="false" class="holo">');
+                $(".midHeader").append(input);
+                input.animate({width: '200px'}, 'fast', function () {
+                    $(this).attr('isopean', 'true');
+                    $(this).focusin(function () {
+                        $(this).keyup(function () {
+                            searchBook($(this).val());
+                        });
+                    });
+                    $(this).focusout(function () {
+                        if (!$(this).val()) {
+                            $(".search").animate({marginRight: '0px'}, 'fast');
+                            $(this).animate({width: '0px'}, 'fast', function () {
+                                $(this).remove();
+                            });
+                        }
+                    });
+                    $("#searchbox").focus();
+                });
+            }
+        });
+        function searchBook(text) {
+            console.log(text);
+        };
+
+
+    });
+
+    (function ($) {
+        var firstTime = false;
+        $.fn.scrolldown = function (elm, fun) {
+            var previousScroll = 0;
+
+            elm.scroll(function () {
+
+                var currentScroll = elm.scrollTop();
+                if (currentScroll > previousScroll) {
+                    previousScroll = currentScroll;
+                    if (firstTime) {
+                        fun();
+                    }
+                    firstTime = true;
+                }
+                else {
+                    previousScroll = currentScroll;
+                }
+            });
+
+        };
+        $.fn.scrollup = function (elm, fun) {
+            var previousScroll = 0;
+            elm.scroll(function () {
+                //console.log("i am scrollin windown");
+                var currentScroll = elm.scrollTop();
+                if (currentScroll < previousScroll) {
+                    previousScroll = currentScroll;
+                    if (firstTime) {
+                        fun();
+                    }
+                    firstTime = true;
+                }
+                else {
+                    previousScroll = currentScroll;
+                }
+            });
+
+        };
+
+        $.fn.endOfpage = function (fun) {
+            $(window).scroll(function () {
+                if ($('.body').get(0).scrollHeight - $(this).scrollTop() == $(this).height()) {
+                    firstTime = false;
+                    fun();
+                }
+            });
+        };
+
+
+    }(jQuery));
+    (function ($) {
+        var count = 1;
+        var conn = {};
+        $.fn.Ws = function (Host) {
+            var websocket;
+            var wsUri = "ws://" + Host + ":4040/";
+            websocket = new WebSocket(wsUri);
+            websocket.onopen = function (evt) {
+                onOpen(evt, Host, websocket)
+            };
+            websocket.onclose = function (evt) {
+                onClose(evt, Host, websocket)
+            };
+            websocket.onmessage = function (evt) {
+                onMessage(evt, Host, websocket)
+            };
+            websocket.onerror = function (evt) {
+                onError(evt, Host, websocket)
+            };
+        };
+        function onOpen(evt, host, websocket) {
+
+            conn[host] = {
+                Socket: websocket,
+                send: function (data) {
+                    this.Socket.send(data);
+                }
+            };
+            console.log("conection open...");
+            $(window).trigger(host + "Ok");
+        }
+
+        function onClose(evt, Host, websocket) {
+            console.log(evt);
+        }
+
+        function onMessage(evt, Host, websocket) {
+            var Wsmsg;
+            eval("function Wsjs(){Wsmsg=" + evt.data + "; return Wsmsg;} Wsjs();");
+            console.log(Wsmsg[1]);
+            var wsElm = $(".Ws" + Wsmsg[0]);
+            wsElm.trigger("Ws" + Wsmsg[0], {msg: Wsmsg[1]});
+            wsElm.unbind("Ws" + Wsmsg[0]);
+            wsElm.remove("Ws" + Wsmsg[0]);
+        }
+
+        function onError(evt, Host, websocket) {
+            console.log(evt);
+        }
+
+        $.fn.Ws.Send = function (Host, elm, key, fn) {
+            elm.bind("Ws" + count, fn);
+            elm.addClass("Ws" + count);
+            conn[Host].send(count + ":" + key);
+            count++;
+        }
+    }(jQuery));
+</script>
+</html>
