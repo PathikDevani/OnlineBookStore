@@ -43,6 +43,7 @@ public class AppService extends Service {
 		intentFilter.addAction(keyList.brodCast.SEVER_START);
 		intentFilter.addAction(keyList.brodCast.SEVER_STOP);
 		intentFilter.addAction(keyList.brodCast.REFRESH_BOOK);
+		intentFilter.addAction(keyList.brodCast.DELETE_BOOK);
 		registerReceiver(receiver, intentFilter);
 		http = new WebSever(this, http_port);
 		webSocket = new SocketServer(websocket_port);
@@ -130,6 +131,9 @@ public class AppService extends Service {
 					webSocket.sendToAll("[1,0,"+book.Jobject()+"]");
 				} catch (JSONException e) {
 				}
+			}else if (intent.getAction().equals(keyList.brodCast.DELETE_BOOK)) {
+				String bid = intent.getStringExtra("bid");
+				webSocket.sendToAll("[1,1,"+"{'bid':'"+bid+"'}"+"]");
 			}
 		}
 	};

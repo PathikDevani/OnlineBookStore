@@ -739,13 +739,18 @@ $(window).bind('update', function (ev, data) {
     var obj = data.msg;
     switch (parseInt(data.key)) {
         case 0:
+
             if($("#"+obj.bid).length){
                 var book = $("#"+obj.bid);
                 setBookATTR(book,obj);
             }else{
                 addbook(data.msg);
             }
-
+            break;
+        case 1:
+            console.log(obj.bid);
+            $("#"+obj.bid).remove();
+            break;
         default:
             break;
 
@@ -869,15 +874,17 @@ function setBookATTR(book,obj){
     book.find(".seller").text("Seller: " + obj.seller);
     book.find(".buybtn").attr({'bid': obj.bid, 'item': obj.item});
     var l = "http://"+defHost+":8080/img/" + obj.bid + ".jpg";
-    var image = new Image();
+    console.log(IsValidImageUrl(l));
 
-    image.src = l;
-    if (image.width == 0) {
-        //console.log(l);
-        book.find(".bimg").css('background-image', 'url("img/unknow.jpg")');
-    }else{
-        book.find(".bimg").css({'background-image': 'url("img/' + obj.bid + '.jpg")' , 'backgroundSize':'100%'});
-    }
+    function IsValidImageUrl(url) {
+        $("<img>", {
+            src: url,
+            error: function() { book.find(".bimg").css({'background-image' : 'url("img/unknow.jpg")','backgroundSize':'100%'}); },
+            load: function() { book.find(".bimg").css({'background-image': 'url("img/' + obj.bid + '.jpg")' , 'backgroundSize':'100%'}); }
+        });
+    };
+
+
     if (parseInt(obj.item) > 0) {
         book.find(".istock").text("In Stock");
         book.css('opacity','1');

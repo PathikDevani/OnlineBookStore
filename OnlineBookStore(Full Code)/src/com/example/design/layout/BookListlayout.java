@@ -225,6 +225,9 @@ public class BookListlayout extends abLyt {
 			@Override
 			public void onClick(MotionEvent event) {
 				AppService.db.deletBook(bookid);
+				Intent i = new Intent(keyList.brodCast.DELETE_BOOK);
+				i.putExtra("bid", bookid);
+				context.sendBroadcast(i);
 				context.sendBroadcast(new Intent(
 						keyList.brodCast.UPDATE_BOOK_LIST));
 				removieAnim(main);

@@ -15,6 +15,7 @@ public class keyList {
 		public static final String SEVER_STARTED = "com.exmple.onlinebook.STARTED";
 		public static final String SEVER_STOPED = "com.exmple.onlinebook.STOPED";
 		public static final String REFRESH_BOOK = "com.exmple.onlinebook.REFRESH_BOOK";
+		public static final String DELETE_BOOK = "com.exmple.onlinebook.DELETE_BOOK";
 		public static boolean isServerStart = false;
 	}
 }

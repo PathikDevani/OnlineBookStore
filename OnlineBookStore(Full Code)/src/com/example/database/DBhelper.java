@@ -19,7 +19,7 @@ import android.util.Log;
 
 
 public class DBhelper extends SQLiteOpenHelper{
-	private static final int DATABASE_VERSION = 2;
+	private static final int DATABASE_VERSION = 1;
 	
 	private static final String TABLE_TRANSACTION = "buy";
 	private static final String TRANSACTION_ID= "id";

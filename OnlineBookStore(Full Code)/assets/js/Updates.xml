@@ -1,0 +1,248 @@
+<Updates>
+  <ApplicationName>V-Play SDK</ApplicationName>
+  <ApplicationVersion>1.0.0</ApplicationVersion>
+  <Checksum>true</Checksum>
+  <PackageUpdate>
+    <DisplayName>SDKMaintenance</DisplayName>
+    <Description>SDKMaintenance is a tool to update/install/uninstall components to the Qt SDK.</Description>
+    <Version>1000.0</Version>
+    <Default>false</Default>
+    <ReleaseDate>Thu  6 Dec 2012 17:39:23 +01:00</ReleaseDate>
+    <Name>com.nokia.ndk.tools.sdkmaintenance</Name>
+    <Dependencies/>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Virtual>true</Virtual>
+    <UpdateFile CompressedSize="0" OS="Windows" UncompressedSize="0">(null)</UpdateFile>
+    <SHA1>2148a41a24a7b6b5cdef183283479506466c07fa</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>V-Play SDK</DisplayName>
+    <Description>Meta package for installing the V-Play SDK</Description>
+    <Version>1.5.0</Version>
+    <Default>false</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk</Name>
+    <Dependencies>net.vplay.vplaysdk.desktop</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="0" OS="Windows" UncompressedSize="0">(null)</UpdateFile>
+    <Licenses>
+      <License name="V-Play License Agreement" file="V-PlayLicense.txt"/>
+    </Licenses>
+    <SHA1>95d296d2a881a84563c03605ae44743e0670441d</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>SDK Core</DisplayName>
+    <Description>Installs the V-Play SDK Core and project wizards</Description>
+    <Version>1.5.0</Version>
+    <Default>false</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.desktop</Name>
+    <Dependencies/>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="3046604" OS="Windows" UncompressedSize="4298862">(null)</UpdateFile>
+    <SHA1>cb12820a177c12a13113847c5351b7111e4140f1</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>SDK Core - MinGW</DisplayName>
+    <Description>Installs the V-Play SDK Core for MinGW compiler</Description>
+    <Version>1.5.0</Version>
+    <Default>true</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.desktop.mingw</Name>
+    <Dependencies>net.vplay.vplaysdk.desktop,com.nokia.ndk.tools.desktop.481,com.nokia.ndk.tools.desktop.481.mingw</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="10417742" OS="Windows" UncompressedSize="76337201">(null)</UpdateFile>
+    <SHA1>2867b7bc7fcbca73e9e58b2af589897d76ca921a</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>SDK Core - MSVC 2010</DisplayName>
+    <Description>Installs the V-Play SDK Core for MSVC 2010 compiler</Description>
+    <Version>1.5.0</Version>
+    <Default>false</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.desktop.msvc2010</Name>
+    <Dependencies>net.vplay.vplaysdk.desktop,com.nokia.ndk.tools.desktop.481,com.nokia.ndk.tools.desktop.481.2010</Dependencies>
+    <AutoDependOn/>
+    <Replaces>net.vplay.vplaysdk.core</Replaces>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="12927023" OS="Windows" UncompressedSize="168858611">(null)</UpdateFile>
+    <SHA1>b96a3d6b150c8bef77103a3b55a8393daecbf5d4</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>Documentation</DisplayName>
+    <Description>Installs the V-Play documentation with API reference</Description>
+    <Version>1.5.0</Version>
+    <Default>true</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.doc</Name>
+    <Dependencies>net.vplay.vplaysdk.desktop</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="10834782" OS="Windows" UncompressedSize="11072552">(null)</UpdateFile>
+    <SHA1>e0d195c5575734a16a6a4f9945622456ad1088a3</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>Examples and Demos</DisplayName>
+    <Description>Examples and demos of V-Play SDK</Description>
+    <Version>1.5.0</Version>
+    <Default>true</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.examples</Name>
+    <Dependencies>net.vplay.vplaysdk.desktop</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="67718405" OS="Windows" UncompressedSize="119273781">(null)</UpdateFile>
+    <SHA1>30330ce60325b1b6f253a58b9388b69915fb0c99</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>MeeGo Target</DisplayName>
+    <Description>Installs the V-Play SDK for MeeGo platform</Description>
+    <Version>1.5.0</Version>
+    <Default>false</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.harmattan</Name>
+    <Dependencies>com.nokia.ndk.tools.harmattan.sysroot</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="22935193" OS="Windows" UncompressedSize="162279164">(null)</UpdateFile>
+    <SHA1>c15cb4da5fa5d7bfca333de28ad7e29b504c6494</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>Symbian Target</DisplayName>
+    <Description>Installs the V-Play SDK for Symbian platform</Description>
+    <Version>1.5.0</Version>
+    <Default>false</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.symbian</Name>
+    <Dependencies>com.nokia.ndk.tools.symbian.symbian3,com.nokia.ndk.api.qtcomponents.symbian,com.nokia.ndk.api.qtmobility.symbian.121,com.nokia.ndk.api.qtmobility.symbian.121.anna</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="30041936" OS="Windows" UncompressedSize="227519244">(null)</UpdateFile>
+    <SHA1>8e5765eb8549b1cce41a9c1e8079afdf972da8b8</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>Project Templates</DisplayName>
+    <Description>Installs the V-Play SDK project templates</Description>
+    <Version>1.5.0</Version>
+    <Default>true</Default>
+    <ReleaseDate>Thu 29 Aug 2013 18:24:53 +02:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.templates</Name>
+    <Dependencies>net.vplay.vplaysdk.desktop</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="35106025" OS="Windows" UncompressedSize="34784578">(null)</UpdateFile>
+    <SHA1>f36ae50edabbb24b457de3b1e305ac33b48e9d09</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>Daily Builds</DisplayName>
+    <Description>Meta package for V-Play SDK daily builds</Description>
+    <Version>1.5.5</Version>
+    <Default>false</Default>
+    <ReleaseDate>Wed 25 Dec 2013 11:03:01 +01:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.daily</Name>
+    <Dependencies>net.vplay.vplaysdk.daily.desktop</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="0" OS="Windows" UncompressedSize="0">(null)</UpdateFile>
+    <SHA1>ee5772350017681655a60a21e0ff7a4ea0c50da1</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>SDK Core</DisplayName>
+    <Description>Installs the V-Play SDK Core and project wizards</Description>
+    <Version>1.5.5</Version>
+    <Default>false</Default>
+    <ReleaseDate>Wed 25 Dec 2013 11:03:01 +01:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.daily.desktop</Name>
+    <Dependencies/>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="3143484" OS="Windows" UncompressedSize="4570392">(null)</UpdateFile>
+    <SHA1>0aa50bd7a1cd126c97cb263d78bdff842431ef6f</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>SDK Core - MinGW</DisplayName>
+    <Description>Installs the V-Play SDK Core for MinGW compiler</Description>
+    <Version>1.5.5</Version>
+    <Default>true</Default>
+    <ReleaseDate>Wed 25 Dec 2013 11:03:01 +01:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.daily.desktop.mingw</Name>
+    <Dependencies>net.vplay.vplaysdk.daily.desktop,com.nokia.ndk.tools.desktop.481,com.nokia.ndk.tools.desktop.481.mingw</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="10570592" OS="Windows" UncompressedSize="76947299">(null)</UpdateFile>
+    <SHA1>63b03e8bc56351d248308e8272634872ca8a82b7</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>SDK Core - MSVC 2010</DisplayName>
+    <Description>Installs the V-Play SDK Core for MSVC 2010 compiler</Description>
+    <Version>1.5.5</Version>
+    <Default>false</Default>
+    <ReleaseDate>Wed 25 Dec 2013 11:03:01 +01:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.daily.desktop.msvc2010</Name>
+    <Dependencies>net.vplay.vplaysdk.daily.desktop,com.nokia.ndk.tools.desktop.481,com.nokia.ndk.tools.desktop.481.2010</Dependencies>
+    <AutoDependOn/>
+    <Replaces>net.vplay.vplaysdk.daily.core</Replaces>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="13177348" OS="Windows" UncompressedSize="169299155">(null)</UpdateFile>
+    <SHA1>c0e3fb1e7dd32f9fa3d6240ac7c99d836a26438c</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>Documentation</DisplayName>
+    <Description>Installs the V-Play documentation with API reference</Description>
+    <Version>1.5.5</Version>
+    <Default>true</Default>
+    <ReleaseDate>Wed 25 Dec 2013 11:03:01 +01:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.daily.doc</Name>
+    <Dependencies>net.vplay.vplaysdk.daily.desktop</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="14611452" OS="Windows" UncompressedSize="14902312">(null)</UpdateFile>
+    <SHA1>2ac45f29d628902cb8850e1734eef7b9e58a9aed</SHA1>
+  </PackageUpdate>
+  <PackageUpdate>
+    <DisplayName>Examples and Demos</DisplayName>
+    <Description>Examples and demos of V-Play SDK</Description>
+    <Version>1.5.5</Version>
+    <Default>false</Default>
+    <ReleaseDate>Wed 25 Dec 2013 11:03:01 +01:00</ReleaseDate>
+    <Name>net.vplay.vplaysdk.daily.examples</Name>
+    <Dependencies>net.vplay.vplaysdk.daily.desktop</Dependencies>
+    <AutoDependOn/>
+    <Replaces/>
+    <UpdateText/>
+    <Script>installscript.qs</Script>
+    <UpdateFile CompressedSize="101677137" OS="Windows" UncompressedSize="160803427">(null)</UpdateFile>
+    <SHA1>aef528bf77332164b4683c1bde10300cebb4c5d6</SHA1>
+  </PackageUpdate>
+</Updates>
